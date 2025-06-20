@@ -16,7 +16,7 @@ function postRoute(pool) {
       if (req.file) {
         // Upload buffer to Cloudinary
         const result = await cloudinary.uploader.upload_stream(
-          { folder: " blogsite-posts" }, // optional folder
+          { folder:"blogsite-posts"}, // optional folder
           async (error, result) => {
             if (error) {
               console.error("Cloudinary upload error:", error);
