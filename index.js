@@ -15,6 +15,7 @@ const pool = new pg.Pool({
 const app = express();
 const PORT = process.env.PORT;
 
+app.set('trust proxy', 1);
 app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static("public/uploads"));
